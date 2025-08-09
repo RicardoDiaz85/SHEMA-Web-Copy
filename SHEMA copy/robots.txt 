@@ -1,0 +1,10 @@
+# robots.txt for SHEMA website
+
+User-agent: *
+Disallow: /admin/
+Disallow: /login/
+Disallow: /register/
+Disallow: /private/
+Allow: /
+
+Sitemap: https://your-domain.com/sitemap.xml

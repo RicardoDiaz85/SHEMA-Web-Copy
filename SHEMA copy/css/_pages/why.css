@@ -1,0 +1,316 @@
+* {
+  box-sizing: border-box;
+}
+
+.titles {
+  max-width: 50rem;
+  text-align: center;
+  margin: 0 auto 3rem;
+  padding: 0 2rem;
+}
+
+.unlock-depth {
+  background: url(/images/pages/why-jewish/section.png), rgba(0, 0, 0, 0.5);
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: auto;
+  padding: 7.5rem 0;
+}
+
+.unlock-depth .container {
+  max-width: 60rem;
+  text-align: center;
+  margin: 0 auto;
+  color: var(--color-white);
+  padding: 0 2rem;
+}
+
+/*------------------- Word Picture ----------------*/
+
+.word-picture {
+  height: auto;
+  padding: 7rem 0;
+  align-items: center;
+  background-color: var(--color-bg-secondary);
+}
+
+.word-picture .container {
+  display: flex;
+  height: auto;
+  margin: 0 auto;
+  padding: 1rem;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.word-picture .cards-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  height: auto;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.wp-card-1 {
+  display: flex;
+  min-width: 20rem;
+  min-height: 35rem;
+  padding: 1.5rem 1.5rem;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1.5rem;
+  flex: 1 0 0;
+  color: var(--color-white);
+  text-align: center;
+  border-radius: 1rem;
+  background: linear-gradient(0deg, #000 -6.6%, rgba(0, 0, 0, 0.2) 100%),
+    url(/images/pages/why-jewish/wp-card-1.png) lightgray 50% / cover no-repeat;
+}
+
+.wp-card-2 {
+  display: flex;
+  min-width: 20rem;
+  min-height: 35rem;
+  padding: 1.5rem 1rem;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1.5rem;
+  flex: 1 0 0;
+  color: var(--color-white);
+  text-align: center;
+  border-radius: 1rem;
+  background: linear-gradient(0deg, #000 -6.6%, rgba(0, 0, 0, 0.1) 100%),
+    url(/images/pages/why-jewish/wp-card-2.png) lightgray 50% / cover no-repeat;
+}
+
+.wp-card-3 {
+  display: flex;
+  min-width: 20rem;
+  min-height: 35rem;
+  padding: 1.5rem 1rem;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1.5rem;
+  flex: 1 0 0;
+  color: var(--color-white);
+  text-align: center;
+  border-radius: 1rem;
+  background: linear-gradient(0deg, #00000090 -6.6%, rgba(0, 0, 0, 0) 100%),
+    url(/images/pages/why-jewish/wp-card-3.png) lightgray 50% / cover no-repeat;
+}
+.wp-card-4 {
+  display: flex;
+  min-width: 20rem;
+  min-height: 35rem;
+  padding: 1.5rem 1rem;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1.5rem;
+  flex: 1 0 0;
+  color: var(--color-white);
+  text-align: center;
+  border-radius: 1rem;
+  background: linear-gradient(0deg, #00000066 -6.6%, rgba(0, 0, 0, 0) 100%),
+    url(/images/pages/why-jewish/wp-card-4.png) lightgray 50% / cover no-repeat;
+}
+
+.word-picture .cards-wrapper p {
+  max-width: 22rem;
+  min-width: 18;
+}
+
+.cards-wrapper a {
+  color: var(--color-link);
+  text-decoration: none;
+}
+
+/*------------------- Original Lense ----------------*/
+.original {
+  padding: 7rem 0;
+}
+
+.original .container {
+  max-width: 70rem;
+  min-width: none;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 1rem;
+}
+
+.original .cards-wrapper {
+  display: flex;
+  margin: 0 auto;
+  width: auto;
+  min-height: 30rem;
+  gap: 2rem;
+  align-items: stretch;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.original .card {
+  display: flex;
+  flex: 1 1 auto; /* grow, shrink, base size */
+  max-width: 30rem;
+  min-width: 20rem;
+  flex-direction: column;
+  outline: 3px solid hsl(0, 0%, 85%);
+  outline-offset: -1px;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.original img {
+  height: 18rem;
+  width: auto;
+  background-position: center;
+  object-fit: cover;
+  flex-shrink: 1;
+}
+
+.original .text-wrapper {
+  padding: 0 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.original .text-wrapper p {
+  padding-bottom: 1rem;
+}
+
+.original .text-wrapper a {
+  margin-top: auto;
+}
+
+/*------------------- Section Quotes ----------------*/
+.quotes {
+  background-color: var(--color-bg-secondary);
+  padding: 7rem 0;
+}
+
+.quotes .container {
+  max-width: 70rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.quotes .cards-wrapper {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 3rem;
+  padding: 0 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.quote-card {
+  background-color: var(--color-white);
+  padding: 2rem;
+  border-radius: 1rem;
+  max-width: 22rem;
+  flex: 1 1 18rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.quote-icon {
+  font-size: 2rem;
+  color: black;
+  margin-bottom: 1rem;
+}
+
+.quote-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+.quote-card hr {
+  margin: 1.5rem 0 1rem;
+  border: none;
+  border-top: 2px solid #e0e0e0;
+}
+
+.quote-card cite {
+  color: gray;
+  font-style: normal;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/*------------------- Section cta ----------------*/
+.cta {
+  background: url(/images/pages/why-jewish/jesus-teaching-img.png),
+    rgba(0, 0, 0, 0.5);
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: auto;
+  padding: 7.5rem 0;
+}
+
+.cta .container {
+  max-width: 60rem;
+  text-align: center;
+  margin: 0 auto;
+  color: var(--color-white);
+  padding: 0 2rem;
+}
+
+@media (max-width: 690px) {
+  .cta {
+    background: url(/images/pages/why-jewish/jesus-teaching-mobile-img.png),
+      rgba(0, 0, 0, 0.5);
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: auto;
+    padding: 7.5rem 0;
+  }
+
+  .button.outline-wh {
+    width: 8.5rem;
+  }
+
+  .original .cards-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+
+  .original .card {
+    flex: 1 1 auto; /* grow, shrink, base size */
+    flex-direction: column;
+    border: 2px solid hsl(0, 0%, 80%);
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 520px) {
+    .original .card {
+    flex: 1 1 auto; /* grow, shrink, base size */
+    max-width: 21rem;
+    flex-direction: column;
+    border: 2px solid hsl(0, 0%, 80%);
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+}

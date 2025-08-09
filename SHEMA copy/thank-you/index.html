@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Jewish Context Bible App | SHEMA | AI-Powered Messianic Jewish Commentary
+    </title>
+    <meta
+      name="description"
+      content="Discover why understanding the Jewish context of the Bible matters. Learn how SHEMA helps restore the original voice of Scripture."
+    />
+    <!-- Optional social preview -->
+    <meta property="og:title" content="Why Jewish Context | SHEMA" />
+    <meta
+      property="og:description"
+      content="Discover why understanding the Jewish context of the Bible matters. Learn how SHEMA helps restore the original voice of Scripture."
+    />
+    <meta
+      property="og:image"
+      content="/images/previews/why-jewish-context.png"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yourdomain.com/context.html" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav-bar">
+        <ul class="nav-container">
+          <!-- Logo -->
+          <li class="nav-logo-wrapper">
+            <a href="index.html">
+              <img
+                class="nav-logo"
+                src="/images/global/logos/desktop-nav-logo.svg"
+                alt="SHEMA logo"
+              />
+            </a>
+          </li>
+
+          <!-- Hamburger icon for mobile -->
+          <li class="nav-toggle-wrapper">
+            <button class="nav-toggle" aria-label="Open menu">
+              <img
+                src="/images/global/icons/hamburger.svg"
+                alt="open menu icon"
+              />
+            </button>
+          </li>
+
+          <!-- Navigation links -->
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/why-jewish-context.html">Why Jewish Context</a></li>
+          <li><a href="/explore.html">Explore</a></li>
+          <li><a href="/blog.html">Blog</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/support.html">Support</a></li>
+          <li><a href="/faq.html">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <!-- Mobile full screen menu -->
+      <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-close" aria-label="Close menu">
+          <img
+            src="/images/global/icons/close-icon.svg"
+            alt="close menu icon"
+          />
+        </button>
+        <ul class="mobile-links">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/why-jewish-context.html">Why Jewish Context</a></li>
+          <li><a href="/explore.html">Explore</a></li>
+          <li><a href="/blog.html">Blog</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/support.html">Support</a></li>
+          <li><a href="/faq.html">FAQ</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main><div>This id the main body</div></main>
+
+    <footer>
+      <div class="container">
+        <nav aria-label="footer">
+          <ul class="nav-footer">
+            <li>
+              <a href="index.html">
+                <img
+                  class="footer-logo"
+                  src="/images/global/logos/desktop-nav-logo.svg"
+                  alt="SHEMA logo"
+                />
+              </a>
+            </li>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/why-jewish-context.html">Why Jewish Context</a></li>
+            <li><a href="/explore.html">Explore</a></li>
+            <li><a href="/blog.html">Blog</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/support.html">Support</a></li>
+            <li><a href="/faq.html">FAQ</a></li>
+          </ul>
+        </nav>
+      </div>
+      <p class="xsmall" role="contentinfo">
+        © SHEMA — A project by Rooted In Love Outreach | Built for the One I
+        love—with all my heart, all my soul, and all my might.
+      </p>
+    </footer>
+
+    <script>
+      const toggle = document.querySelector(".nav-toggle");
+      const closeBtn = document.querySelector(".mobile-close");
+      const mobileMenu = document.getElementById("mobileMenu");
+
+      toggle.addEventListener("click", () => {
+        mobileMenu.classList.add("active");
+      });
+
+      closeBtn.addEventListener("click", () => {
+        mobileMenu.classList.remove("active");
+      });
+
+      // ✅ Auto-close on resize
+      window.addEventListener("resize", () => {
+        if (window.innerWidth > 690) {
+          mobileMenu.classList.remove("active");
+        }
+      });
+    </script>
+  </body>
+</html>

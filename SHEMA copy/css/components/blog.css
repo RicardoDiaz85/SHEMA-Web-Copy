@@ -1,0 +1,103 @@
+.hero {
+  margin: 0;
+  padding: 3rem 0;
+}
+
+.hero .container {
+  gap: 3rem;
+  padding: 0 1.5rem;
+}
+
+.titles {
+  max-width: 50rem;
+  text-align: center;
+  margin: 0 auto 3rem;
+  padding: 0 2rem;
+}
+
+/*------------------- Original Lense ----------------*/
+.articles {
+  padding: 7rem 0;
+  background-color: var(--color-bg-secondary);
+}
+
+.articles .container {
+  max-width: 70rem;
+  min-width: none;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 1rem;
+}
+
+.articles .cards-wrapper {
+  display: flex;
+  margin: 0 auto 3rem;
+  width: auto;
+  min-height: 30rem;
+  gap: 2rem;
+  align-items: stretch;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.articles .card {
+  display: flex;
+  flex: 1 1 auto; /* grow, shrink, base size */
+  max-width: 30rem;
+  min-width: 20rem;
+  flex-direction: column;
+  outline: 3px solid hsl(0, 0%, 85%);
+  outline-offset: -1px;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.articles img {
+  height: 18rem;
+  width: auto;
+  background-position: center;
+  object-fit: cover;
+  flex-shrink: 1;
+}
+
+.articles .text-wrapper {
+  padding: 0 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.articles .text-wrapper p {
+  padding-bottom: 1rem;
+}
+
+.articles .text-wrapper a {
+  margin-top: auto;
+}
+
+.articles-titles {
+  max-width: 50rem;
+  text-align: center;
+  margin: 0 auto 3rem;
+  padding: 0 2rem;
+}
+
+.articles-titles .h2-subtitle {
+  margin: 0;
+}
+
+.articles-titles h2 {
+  margin: 1rem;
+}
+
+@media (max-width: 690px) {
+  .hero .container {
+    padding: 0 1rem;
+  }
+
+  .titles {
+    padding: 0 1rem;
+  }
+}

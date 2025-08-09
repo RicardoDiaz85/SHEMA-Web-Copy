@@ -1,0 +1,116 @@
+/*-------------------  Explore Features ----------------*/
+.explore-features {
+  display: flex;
+  background: var(--color-bg-secondary); /* your light gray */
+  padding: 7rem 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+
+.explore-features .container {
+  display: flex;
+  max-width: 60rem;
+  background-color: var(--color-white);
+  margin: 0 1rem;
+  padding: 2rem 2rem;
+  text-align: left;
+  align-items: center;
+  border-radius: 1rem;
+  justify-content: space-between;
+  justify-content: center;
+  gap: 2rem;
+}
+
+/* keep the text block narrow and left-aligned */
+.text {
+  max-width: 27rem;
+  text-align: left;
+}
+
+/* headings & paragraph spacing */
+.text h2,
+.text .h2-subtitle,
+.text p {
+  margin: 0 0 0.75rem;
+  padding-left: 0;
+}
+
+/* list: tidy indent + proper bullet alignment */
+.text ul {
+  list-style: disc outside; /* hanging bullets */
+  padding-left: 1.25rem; /* small, consistent indent */
+  margin: 0.5rem 0 1rem;
+}
+
+/* list items: no extra padding */
+.text li {
+  padding-left: 0; /* reset the 2rem */
+  margin: 0.35rem 0;
+}
+
+/* optional: style the bullets */
+.text li::marker {
+  color: var(--color-black);
+  font-size: 1em;
+}
+
+.gif-container img {
+  display: flex;
+  max-height: auto;
+  max-width: 27rem;
+  min-width: 20rem;
+  flex-shrink: 1;
+}
+
+/*------------------- Section cta ----------------*/
+.cta {
+  background: url(/images/pages/why-jewish/jesus-teaching-img.png),
+    rgba(0, 0, 0, 0.5);
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: auto;
+  padding: 7.5rem 0;
+}
+
+.cta .container {
+  max-width: 60rem;
+  text-align: center;
+  margin: 0 auto;
+  color: var(--color-white);
+  padding: 0 2rem;
+}
+
+/*------------------- Section faq ----------------*/
+.faq-link {
+  display: inline-flex; /* keeps text + icon together inline */
+  align-items: center; /* vertically center text with icon */
+  gap: 0.25rem; /* space between text and icon */
+  font-weight: 500;
+}
+
+.faq-link.faq-link:hover {
+  text-decoration: underline;
+}
+
+.faq-link img {
+  display: inline-block;
+  width: 1em; /* match icon size to text height */
+  height: auto;
+}
+
+@media (max-width: 690px) {
+  .cta {
+    background: url(/images/pages/why-jewish/jesus-teaching-mobile-img.png),
+      rgba(0, 0, 0, 0.5);
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: auto;
+    padding: 7.5rem 0;
+  }
+}

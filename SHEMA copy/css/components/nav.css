@@ -1,0 +1,142 @@
+/* Navigation Bar */
+.nav-bar {
+  border-bottom: 1px solid #dc9949;
+  height: 4rem;
+  width: 100%;
+}
+
+/* Nav container (desktop layout) */
+.nav-container {
+  max-width: 60rem;
+  min-width: 690px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.nav-logo {
+  height: 2rem;
+  flex-shrink: 0;
+}
+
+/* Nav links */
+.nav-container a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  padding: 0 1rem;
+  font-size: 0.9rem;
+  line-height: 1.3;
+  font-weight: 300;
+  text-decoration: none;
+  color: var(--color-black);
+  white-space: nowrap;
+}
+
+.nav-container a:hover {
+  font-weight: 400;
+  color: #dc9949;
+  text-decoration: none;
+}
+
+.nav-container a.active {
+  font-weight: 500;
+}
+
+/* Mobile Menu Overlay */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 999;
+  padding: 1rem 2rem;
+  background: var(--color-white);
+  display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.mobile-menu.active {
+  display: flex;
+}
+
+.mobile-logo {
+  height: 2.5rem;
+  flex-shrink: 0;
+}
+
+.mobile-menu .mobile-close {
+  position: fixed;
+  top: 0.5rem;
+  right: 0.12rem;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.mobile-menu .mobile-links {
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.mobile-menu .mobile-links li a {
+  display: block;
+  padding: 1rem 0;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #141414;
+  text-decoration: none;
+}
+
+.mobile-menu .mobile-links li a:hover {
+  color: #dc9949;
+}
+
+/* Hamburger icon */
+.nav-toggle-wrapper {
+  display: none;
+}
+
+.nav-toggle {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #141414;
+}
+
+/* Responsive adjustments */
+@media (max-width: 744px) {
+  .nav-container {
+    width: 100vw;
+    min-width: 300px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-toggle-wrapper {
+    display: block;
+  }
+
+  .nav-container li:not(.nav-logo-wrapper):not(.nav-toggle-wrapper) {
+    display: none;
+  }
+
+  .nav-logo {
+    height: 1.75rem;
+    flex-shrink: 0;
+  }
+}

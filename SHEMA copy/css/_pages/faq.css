@@ -1,0 +1,54 @@
+.hero {
+  padding: 3rem;
+}
+
+.faq {
+  padding: 5rem 0 0;
+}
+
+.faq-group {
+  margin-bottom: 6rem;
+
+}
+
+.contact .container {
+  margin: 0 auto;
+  padding: 0 0 7rem;
+}
+
+.contact p {
+  text-align: center;
+}
+
+/*-------------------  FAQ CTA ----------------*/
+
+.faq-cta {
+  display: flex;
+  padding: 7rem 0;
+  background-color: var(--color-bg-secondary);
+  justify-content: center;
+  align-items: center;
+}
+
+.faq-cta .container {
+  display: flex;
+  flex-direction: column;
+  max-width: 60rem;
+  margin: 0 1rem;
+  padding: 5rem 2rem;
+  outline: 3px solid hsl(0, 0%, 85%);
+  border-radius: 1rem;
+  background-color: var(--color-white);
+  align-items: center;
+  gap:rem;
+}
+
+.faq-cta .buttons-wrapper {
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.faq-cta button {
+  width: 10rem;
+}
