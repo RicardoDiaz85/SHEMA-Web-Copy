@@ -1,0 +1,12 @@
+{
+  "name": "shema-web",
+  "private": true,
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  },
+  "scripts": {
+    "dev": "ELEVENTY_ENV=dev npx @11ty/eleventy --serve",
+    "build": "npx @11ty/eleventy",
+    "serve": "npx @11ty/eleventy --serve"
+  }
+}
