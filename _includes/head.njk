@@ -1,18 +1,4 @@
-{# Minimal, SEO-friendly, no duplication #}
-<title>{{ title | safe }}</title>
-{% if description %}<meta name="description" content="{{ description | safe }}">{% endif %}
-{% if canonical %}<link rel="canonical" href="{{ canonical | safe }}">{% endif %}
-
-{# Open Graph / Twitter - render only if provided #}
-{% if ogTitle or title %}<meta property="og:title" content="{{ ogTitle or title | safe }}">{% endif %}
-{% if ogDescription or description %}<meta property="og:description" content="{{ ogDescription or description | safe }}">{% endif %}
-{% if ogUrl or canonical %}<meta property="og:url" content="{{ ogUrl or canonical | safe }}">{% endif %}
-{% if ogImage %}<meta property="og:image" content="{{ ogImage | safe }}">{% endif %}
-
-{% if twitterCard %}<meta name="twitter:card" content="{{ twitterCard | safe }}">{% endif %}
-{% if twitterTitle or title %}<meta name="twitter:title" content="{{ twitterTitle or title | safe }}">{% endif %}
-{% if twitterDescription or description %}<meta name="twitter:description" content="{{ twitterDescription or description | safe }}">{% endif %}
-{% if twitterImage %}<meta name="twitter:image" content="{{ twitterImage | safe }}">{% endif %}
+{% include "seo.njk" %}
 
 {# Icons / PWA #}
 <link rel="icon" href="./favicon.ico">
