@@ -20,7 +20,7 @@
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://yourdomain.com/blog.html" />
-    <meta property="og:image" content="/images/previews/blog.png" />
+    <meta property="og:image" content="./images/previews/blog.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
 
@@ -31,12 +31,13 @@
       name="twitter:description"
       content="Read SHEMA's blog for insights on Scripture's Jewish roots, cultural context, and AI-powered Bible study tips."
     />
-    <meta name="twitter:image" content="/images/previews/blog.png" />
+    <meta name="twitter:image" content="./images/previews/blog.png" />
 
-    <!-- Favicons -->
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <link rel="icon" href="/favicon.ico" sizes="any" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="icon" href="./favicon.ico" />
+    <link rel="icon" href="./shin-favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+    <!-- TODO: supply ./icons/apple-touch-icon.png -->
+    <link rel="manifest" href="./manifest.webmanifest" />
 
     <!-- Theme color -->
     <meta name="theme-color" content="#141414" />
@@ -50,10 +51,10 @@
     />
 
     <!-- CSS (order: globals, then components) -->
-    <link rel="stylesheet" href="/css/components/nav.css" />
-    <link rel="stylesheet" href="/css/styles.css" />
-    <link rel="stylesheet" href="/css/components/blog.css" />
-    <link rel="stylesheet" href="/css/components/footer.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/components/nav.css" />
+    <link rel="stylesheet" href="./css/components/blog.css" />
+    <link rel="stylesheet" href="./css/components/footer.css" />
   </head>
 
   <body>
@@ -91,7 +92,7 @@
           <div class="cards-wrapper">
             <div class="card">
               <img
-                src="/images/pages/why-jewish/ol-img-1.png"
+                src="./images/pages/why-jewish/ol-img-1.png"
                 alt="Group reading"
               />
               <div class="text-wrapper">
@@ -109,7 +110,7 @@
             </div>
             <div class="card">
               <img
-                src="/images/pages/why-jewish/ol-img-2.png"
+                src="./images/pages/why-jewish/ol-img-2.png"
                 alt="Man teaching"
               />
               <div class="text-wrapper">
@@ -133,7 +134,7 @@
           <div class="cards-wrapper">
             <div class="card">
               <img
-                src="/images/pages/why-jewish/ol-img-1.png"
+                src="./images/pages/why-jewish/ol-img-1.png"
                 alt="Group reading"
               />
               <div class="text-wrapper">
@@ -151,7 +152,7 @@
             </div>
             <div class="card">
               <img
-                src="/images/pages/why-jewish/ol-img-2.png"
+                src="./images/pages/why-jewish/ol-img-2.png"
                 alt="Man teaching"
               />
               <div class="text-wrapper">
@@ -176,7 +177,7 @@
     </main>
     <!--#include file="../partials/footer.html" -->
 
-    <script src="/js/nav.js"></script>
+    <script defer src="./js/nav.js"></script>
   </body>
 </html>
 
