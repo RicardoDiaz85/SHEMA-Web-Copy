@@ -23,10 +23,6 @@
       content="Discover the Bible’s Jewish roots with AI-assisted commentary grounded in Messianic Jewish sources."
     />
     <meta property="og:url" content="https://yourdomain.com/" />
-    <meta property="og:image" content="/images/previews/home.png" />
-    <!-- Optional but nice: dimensions help some crawlers lay out cards -->
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -38,12 +34,13 @@
       name="twitter:description"
       content="Discover the Bible’s Jewish roots with AI-assisted commentary grounded in Messianic Jewish sources."
     />
-    <meta name="twitter:image" content="/images/previews/home.png" />
 
     <!-- Icons -->
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <link rel="icon" href="/favicon.ico" sizes="any" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="icon" href="./favicon.ico" />
+    <link rel="icon" href="./shin-favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+    <!-- TODO: supply ./icons/apple-touch-icon.png -->
+    <link rel="manifest" href="./manifest.webmanifest" />
 
     <!-- Theme color (optional, nice for mobile address bar) -->
     <meta name="theme-color" content="#141414" />
@@ -57,9 +54,9 @@
     />
 
     <!-- CSS (order: globals, then components) -->
-    <link rel="stylesheet" href="/css/components/nav.css" />
-    <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="/css/components/footer.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/components/nav.css" />
+    <link rel="stylesheet" href="./css/components/footer.css" />
   </head>
 
   <body>
@@ -479,6 +476,6 @@
       </p>
     </footer>
 
-    <script src="/js/nav.js"></script>
+    <script defer src="./js/nav.js"></script>
   </body>
 </html>
