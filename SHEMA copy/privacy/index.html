@@ -1,51 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      Jewish Context Bible App | SHEMA | AI-Powered Messianic Jewish Commentary
-    </title>
-    <meta
-      name="description"
-      content="Discover why understanding the Jewish context of the Bible matters. Learn how SHEMA helps restore the original voice of Scripture."
-    />
-    <!-- Optional social preview -->
-    <meta property="og:title" content="Why Jewish Context | SHEMA" />
-    <meta
-      property="og:description"
-      content="Discover why understanding the Jewish context of the Bible matters. Learn how SHEMA helps restore the original voice of Scripture."
-    />
-    <meta
-      property="og:image"
-      content="./images/previews/why-jewish-context.png"
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://yourdomain.com/context.html" />
-    <link rel="icon" href="/favicon.ico" />
-    <link rel="icon" href="/shin-favicon.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
-    <!-- TODO: supply ./icons/apple-touch-icon.png -->
-    <link rel="manifest" href="/manifest.webmanifest" />
-
-    <meta name="theme-color" content="#141414" />
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic&display=swap" rel="stylesheet" />
-
-    <!-- CSS (order: globals, then components) -->
-    <link rel="stylesheet" href="./css/styles.css" />
-    <link rel="stylesheet" href="./css/components/nav.css" />
-    <link rel="stylesheet" href="./css/components/footer.css" />
-  </head>
-  <body>
-    {% include "header.html" %}
-
-    <main><div>This id the main body</div></main>
-    {% include "footer.html" %}
-
-    <script defer src="./js/nav.js"></script>
-  </body>
-</html>
+---
+layout: layouts/base.njk
+title: "Jewish Context Bible App | SHEMA | AI-Powered Messianic Jewish Commentary"
+description: "Discover why understanding the Jewish context of the Bible matters. Learn how SHEMA helps restore the original voice of Scripture."
+ogTitle: "Why Jewish Context | SHEMA"
+ogDescription: "Discover why understanding the Jewish context of the Bible matters. Learn how SHEMA helps restore the original voice of Scripture."
+ogImage: "./images/previews/why-jewish-context.png"
+ogUrl: "https://yourdomain.com/context.html"
+---
+<div>This id the main body</div>

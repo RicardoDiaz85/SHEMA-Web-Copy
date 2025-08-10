@@ -1,0 +1,35 @@
+{# Minimal, SEO-friendly, no duplication #}
+<title>{{ title | safe }}</title>
+{% if description %}<meta name="description" content="{{ description | safe }}">{% endif %}
+{% if canonical %}<link rel="canonical" href="{{ canonical | safe }}">{% endif %}
+
+{# Open Graph / Twitter - render only if provided #}
+{% if ogTitle or title %}<meta property="og:title" content="{{ ogTitle or title | safe }}">{% endif %}
+{% if ogDescription or description %}<meta property="og:description" content="{{ ogDescription or description | safe }}">{% endif %}
+{% if ogUrl or canonical %}<meta property="og:url" content="{{ ogUrl or canonical | safe }}">{% endif %}
+{% if ogImage %}<meta property="og:image" content="{{ ogImage | safe }}">{% endif %}
+
+{% if twitterCard %}<meta name="twitter:card" content="{{ twitterCard | safe }}">{% endif %}
+{% if twitterTitle or title %}<meta name="twitter:title" content="{{ twitterTitle or title | safe }}">{% endif %}
+{% if twitterDescription or description %}<meta name="twitter:description" content="{{ twitterDescription or description | safe }}">{% endif %}
+{% if twitterImage %}<meta name="twitter:image" content="{{ twitterImage | safe }}">{% endif %}
+
+{# Icons / PWA #}
+<link rel="icon" href="./favicon.ico">
+<link rel="icon" href="./shin-favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
+<link rel="manifest" href="./manifest.webmanifest">
+<meta name="theme-color" content="#141414">
+
+{# Fonts #}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic&display=swap" rel="stylesheet">
+
+{# CSS order: globals → nav → page-css[] → footer #}
+<link rel="stylesheet" href="./css/styles.css">
+<link rel="stylesheet" href="./css/components/nav.css">
+{% for href in pageCss or [] %}
+<link rel="stylesheet" href="{{ href }}">
+{% endfor %}
+<link rel="stylesheet" href="./css/components/footer.css">
