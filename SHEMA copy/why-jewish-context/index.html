@@ -69,73 +69,7 @@
     <link rel="stylesheet" href="/css/components/footer.css" />
   </head>
   <body>
-    <header class="site-header">
-      <nav class="nav-bar">
-        <ul class="nav-container">
-          <!-- Logo -->
-          <li class="nav-logo-wrapper">
-            <a href="index.html">
-              <img
-                class="nav-logo"
-                src="/images/global/logos/desktop-nav-logo.svg"
-                alt="SHEMA logo"
-              />
-            </a>
-          </li>
-
-          <!-- Hamburger icon for mobile -->
-          <li class="nav-toggle-wrapper">
-            <button
-              class="nav-toggle"
-              type="button"
-              aria-label="Open menu"
-              aria-controls="mobileMenu"
-              aria-expanded="false"
-            >
-              <img
-                src="/images/global/icons/hamburger.svg"
-                alt=""
-                aria-hidden="true"
-              />
-            </button>
-          </li>
-
-          <!-- Navigation links -->
-          <li><a href="/">Home</a></li>
-          <li>
-            <a href="/why-jewish-context/index.html" class="active"
-              >Why Jewish Context</a
-            >
-          </li>
-          <li><a href="/explore/index.html">Explore</a></li>
-          <li><a href="/blog/index.html">Blog</a></li>
-          <li><a href="/about/index.html">About</a></li>
-          <li><a href="/support/index.html">Support</a></li>
-          <li><a href="/faq/index.html">FAQ</a></li>
-        </ul>
-      </nav>
-
-      <!-- Mobile full screen menu -->
-      <div class="mobile-menu" id="mobileMenu">
-        <button class="mobile-close" aria-label="Close menu">
-          <img
-            src="/images/global/icons/close-icon.svg"
-            alt="close menu icon"
-          />
-        </button>
-        <ul class="mobile-links">
-          <li><a href="/">Home</a></li>
-          <li>
-            <a href="/why-jewish-context/index.html">Why Jewish Context</a>
-          </li>
-          <li><a href="/explore/index.html">Explore</a></li>
-          <li><a href="/blog/index.html">Blog</a></li>
-          <li><a href="/about/index.html">About</a></li>
-          <li><a href="/support/index.html">Support</a></li>
-          <li><a href="/faq/index.html">FAQ</a></li>
-        </ul>
-      </div>
-    </header>
+    <!--#include file="../partials/header.html" -->
     <main>
       <!-- Hero Section ---------------------------------------->
       <section class="hero">
@@ -401,40 +335,9 @@
         </div>
       </section>
     </main>
-
-    <footer>
-      <div class="container">
-        <nav aria-label="footer">
-          <ul class="nav-footer">
-            <li>
-              <a href="index.html">
-                <img
-                  class="footer-logo"
-                  src="/images/global/logos/desktop-nav-logo.svg"
-                  alt="SHEMA logo"
-                />
-              </a>
-            </li>
-            <li><a href="/index.html">Home</a></li>
-            <li>
-              <a href="/why-jewish-context.html" class="active"
-                >Why Jewish Context</a
-              >
-            </li>
-            <li><a href="/explore.html">Explore</a></li>
-            <li><a href="/blog.html">Blog</a></li>
-            <li><a href="/about.html">About</a></li>
-            <li><a href="/support.html">Support</a></li>
-            <li><a href="/faq.html">FAQ</a></li>
-          </ul>
-        </nav>
-      </div>
-      <p class="xsmall" role="contentinfo">
-        © SHEMA — A project by Rooted In Love Outreach | Built for the One I
-        love—with all my heart, all my soul, and all my might.
-      </p>
-    </footer>
+    <!--#include file="../partials/footer.html" -->
 
     <script src="/js/nav.js"></script>
   </body>
 </html>
+
