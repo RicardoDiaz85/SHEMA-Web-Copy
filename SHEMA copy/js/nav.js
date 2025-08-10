@@ -49,3 +49,22 @@ if (toggle && closeBtn && mobileMenu) {
 
   window.addEventListener("keydown", handleFirstTab);
 })();
+
+// Highlight active navigation link based on current path
+document.addEventListener("DOMContentLoaded", () => {
+  const normalize = (p) => (p.endsWith("/") ? p : p + "/");
+  const current = normalize(location.pathname);
+  const links = Array.from(
+    document.querySelectorAll("header a, footer a")
+  ).filter((link) => !link.querySelector("img"));
+
+  let activeSet = false;
+  links.forEach((link) => {
+    link.classList.remove("active");
+    const href = normalize(link.getAttribute("href"));
+    if (!activeSet && href === current) {
+      link.classList.add("active");
+      activeSet = true;
+    }
+  });
+});
