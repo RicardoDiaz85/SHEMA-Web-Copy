@@ -1,5 +1,6 @@
 node_modules/
 _site/
+SHEMA copy/
 # macOS Finder files
 .DS_Store
 # IDEs
