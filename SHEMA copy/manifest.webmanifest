@@ -1,10 +1,10 @@
 {
-    "name": "AI Bible Website SHEMA",
+    "name": "SHEMA",
     "short_name": "SHEMA",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#ffffff",
-    "theme_color": "#2d2d2d",
+    "theme_color": "#0e0e0e",
     "description": "A progressive web app for the AI Bible Website SHEMA.",
     "icons": [
         {
@@ -16,6 +16,12 @@
             "src": "icons/icon-512x512.png",
             "sizes": "512x512",
             "type": "image/png"
+        },
+        {
+            "src": "/icons/apple-touch-icon.png",
+            "sizes": "180x180",
+            "type": "image/png",
+            "purpose": "any"
         }
     ],
     "lang": "en"

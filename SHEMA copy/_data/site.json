@@ -1,6 +1,8 @@
 {
   "name": "SHEMA",
   "url": "https://yourdomain.com",
+  "themeColor": "#0e0e0e",
+  "backgroundColor": "#ffffff",
   "title": "SHEMA — AI-Powered Jewish Context Bible App",
   "description": "Discover the Bible’s Jewish roots with AI-assisted commentary grounded in Messianic Jewish sources.",
   "twitter": {
