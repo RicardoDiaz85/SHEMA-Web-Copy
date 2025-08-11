@@ -2,11 +2,16 @@
   "name": "shema-web",
   "private": true,
   "devDependencies": {
-    "@11ty/eleventy": "^3.0.0"
+    "@11ty/eleventy": "^3.0.0",
+    "@html-validate/cli": "^8.0.0",
+    "linkinator": "^6.0.0"
   },
   "scripts": {
     "dev": "eleventy --serve",
     "build": "eleventy",
+    "check:links": "npm run build && npx linkinator _site --silent --recurse",
+    "check:html": "npm run build && npx html-validate \"_site/**/*.html\"",
+    "check:all": "npm run check:links && npm run check:html",
     "serve": "npx @11ty/eleventy --serve",
     "start": "eleventy --serve"
   }
