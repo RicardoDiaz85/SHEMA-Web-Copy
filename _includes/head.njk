@@ -6,10 +6,12 @@
 
 <link rel="stylesheet" href="./css/styles.css">
 <link rel="stylesheet" href="./css/components/nav.css">
-{% for href in pageCss or [] %}
-<link rel="stylesheet" href="{{ href }}">
-{% endfor %}
 <link rel="stylesheet" href="./css/components/footer.css">
+{% if pageCss %}
+  {% for href in pageCss %}
+    <link rel="stylesheet" href="{{ href }}">
+  {% endfor %}
+{% endif %}
 
 <link rel="icon" href="/favicon.ico">
 <link rel="icon" href="/shin-favicon.svg" type="image/svg+xml">
