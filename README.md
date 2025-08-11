@@ -1,37 +1,37 @@
 # SHEMA Web
 
-## Requirements
-- Node 18+
+Static site built with [Eleventy (11ty)] using build-time includes.
 
-## Install
-```sh
+## Prerequisites
+
+* Node.js 18+
+
+## Setup
+
+```bash
 npm install
 ```
 
-## Develop
-```sh
-npm run start
-```
-Serves Eleventy and watches files.
+## Local development
 
-## Build
-```sh
+```bash
+npm run dev
+```
+
+This serves the site and watches for changes. Output is written to `_site/`.
+
+## Production build
+
+```bash
 npm run build
 ```
-Outputs to `_site/`.
 
-## Folder notes
-- Source lives in the repo (includes `_includes/` and `SHEMA copy/` pages).
-- Built site is `_site/` (ignored by git).
+## Structure
 
-## Conventions
-- Use Prettier (`.prettierrc.json`) and EditorConfig
-- HTML templating via Nunjucks `{% include %}` with `_includes/header.html` and `_includes/footer.html`
+* `_includes/` — shared templates/partials (header, footer, head, layouts)
+* `SHEMA copy/` — page content, assets, css/js
+* `_site/` — generated output (ignored by git)
 
-## Next tasks
-- [ ] Provide `./icons/apple-touch-icon.png` (180×180)
-- [ ] Replace placeholder canonical/og:url with real domain
-- [ ] Cloudflare Pages setup (build: `npm run build`, output: `_site/`)
+## Notes
 
-## License
-License/attribution placeholder.
+* `nav.js` is loaded once from the shared footer include. Do not add page-level `<script src="./js/nav.js">` tags.

@@ -1,5 +1,9 @@
 node_modules/
 _site/
-
-# macOS
+# macOS Finder files
 .DS_Store
+# IDEs
+.idea/
+.vscode/
+# env
+.env
