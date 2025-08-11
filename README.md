@@ -29,7 +29,7 @@ npm run build
 ## Structure
 
 * `_includes/` — shared templates/partials (header, footer, head, layouts)
-* `SHEMA copy/` — page content, assets, css/js
+* `site/` — page content, assets, css/js
 * `_site/` — generated output (ignored by git)
 
 ## Notes
