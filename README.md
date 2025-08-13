@@ -32,6 +32,11 @@ npm run build
 * `site/` — page content, assets, css/js
 * `_site/` — generated output (ignored by git)
 
+## Project Docs
+
+- [PRD](docs/PRD.md)
+- [Developer Handoff](docs/Developer-Handoff.md)
+
 ## Notes
 
 * `nav.js` is loaded once from the shared footer include. Do not add page-level `<script src="./js/nav.js">` tags.
