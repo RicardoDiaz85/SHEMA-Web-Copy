@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+if command -v node >/dev/null 2>&1; then
+  node scripts/update-docs-from-commit.mjs || true
+fi
+

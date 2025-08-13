@@ -2,12 +2,14 @@
   "name": "shema-web",
   "private": true,
   "devDependencies": {
-    "@11ty/eleventy": "^3.0.0"
+    "@11ty/eleventy": "^3.0.0",
+    "husky": "^9.0.0"
   },
   "scripts": {
     "dev": "eleventy --serve",
     "build": "eleventy",
     "serve": "npx @11ty/eleventy --serve",
-    "start": "eleventy --serve"
+    "start": "eleventy --serve",
+    "prepare": "husky"
   }
 }
