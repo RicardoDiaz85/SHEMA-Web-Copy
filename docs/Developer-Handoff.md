@@ -1,5 +1,8 @@
 # SHEMA-Web — Developer Handoff & Learning Notes
 
+## Changelog
+*(Newest entries first)*
+
 ## Repo Structure
 ```
 

@@ -1,5 +1,8 @@
 # SHEMA-Web — Product Requirements & Vision
 
+## Changelog
+*(Newest entries first)*
+
 ## Purpose & Vision
 - One-paragraph mission of SHEMA (AI-assisted, Jewish-context Bible study; fast, clean, accessible marketing site for early access/waitlist).
 
