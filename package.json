@@ -10,6 +10,6 @@
     "build": "eleventy",
     "serve": "npx @11ty/eleventy --serve",
     "start": "eleventy --serve",
-    "prepare": "husky"
+    "prepare": "husky install"
   }
 }
