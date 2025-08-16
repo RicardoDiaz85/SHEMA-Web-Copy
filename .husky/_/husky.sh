@@ -14,7 +14,7 @@ if [ -z "$husky_skip_init" ]; then
     . ~/.huskyrc
   fi
   export readonly husky_skip_init=1
-  sh -e "$0" "$@"
+  sh -e -- "$0" "$@"
   exitCode=$?
   unset husky_skip_init
   exit $exitCode
