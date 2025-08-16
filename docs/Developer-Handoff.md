@@ -2,6 +2,18 @@
 
 ## Changelog
 *(Newest entries first)*
+### 2025-08-15 — Merge pull request #28 from RicardoDiaz85/codex/repair-git-hooks-in-husky
+- Commit: 2ec1dd6df4665ff9e754d3b1428d948922fdc77f
+- Files changed:
+  - A	.husky/_/husky.sh
+  - A	.husky/commit-msg
+  - M	.husky/post-commit
+  - A	.husky/pre-commit
+  - M	package.json
+  - A	scripts/fix-husky.mjs
+- Notes:
+  chore: repair husky git hooks
+
 
 ## Repo Structure
 ```

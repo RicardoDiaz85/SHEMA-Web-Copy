@@ -1,86 +1,56 @@
 #!/usr/bin/env node
+import fs from "node:fs";
+import path from "node:path";
 import { execSync } from "node:child_process";
-import { readFileSync, writeFileSync, existsSync } from "node:fs";
 
-const DOCS = ["docs/PRD.md", "docs/Developer-Handoff.md"];
-const HEADER = "## Changelog";
-const HEADER_HINT = "*(Newest entries first)*";
+// --- config (edit paths/titles if you want) ---
+const filesToUpdate = [
+  { path: "docs/PRD.md", sectionHeading: "## Changelog" },
+  { path: "docs/Developer-Handoff.md", sectionHeading: "## Changelog" },
+];
 
-function sh(cmd) {
-  try {
-    return execSync(cmd, { stdio: ["ignore", "pipe", "ignore"] })
-      .toString()
-      .trim();
-  } catch {
-    return "";
+// Only log these types into the changelog
+const allowedTypes = new Set(["feat", "fix", "perf", "refactor", "docs", "chore", "build", "ci", "style", "test", "revert"]);
+
+// --- read last commit ---
+const subject = execSync('git log -1 --pretty=%s').toString().trim(); // e.g. "feat(footer): add donate link"
+const body = execSync('git log -1 --pretty=%b').toString().trim();     // optional long body
+const hash = execSync('git rev-parse --short HEAD').toString().trim();
+const date = new Date().toISOString().slice(0, 10);
+
+// Parse type(scope): desc
+const match = subject.match(/^(\w+)(?:\(([^)]+)\))?:\s*(.+)$/);
+if (!match) {
+  // Not conventional: skip quietly
+  process.exit(0);
+}
+const [, type, scope = "", desc] = match;
+if (!allowedTypes.has(type)) process.exit(0);
+
+const bullet = `- ${date} — **${type}${scope ? `(${scope})` : ""}**: ${desc} (${hash})` + (body ? `\n  \n  ${body.replace(/\r?\n/g, "\n  ")}` : "");
+
+// --- helper to ensure changelog header exists and append entry above older items ---
+function updateFile(relPath, heading) {
+  const filePath = path.resolve(process.cwd(), relPath);
+  if (!fs.existsSync(filePath)) return;
+
+  let content = fs.readFileSync(filePath, "utf8");
+
+  if (!content.includes(heading)) {
+    // Create the section at the end
+    content = `${content.trim()}\n\n${heading}\n\n`;
   }
+
+  // Insert bullet right after heading (newest first)
+  const parts = content.split(heading);
+  if (parts.length < 2) return;
+
+  const before = parts[0];
+  const after = parts.slice(1).join(heading); // in case heading appears more than once, join back
+  const updated = `${before}${heading}\n${bullet}\n${after.replace(/^\n*/, "\n")}`;
+
+  fs.writeFileSync(filePath, updated, "utf8");
+  console.log(`Updated ${relPath} changelog with: ${subject}`);
 }
 
-function ensureChangelogHeader(text) {
-  if (
-    text.includes(`\n${HEADER}\n`) ||
-    text.startsWith(`${HEADER}\n`) ||
-    text.includes(`\r\n${HEADER}\r\n`)
-  )
-    return text;
-  const prefix = `${HEADER}\n${HEADER_HINT}\n\n`;
-  return prefix + text;
-}
-
-function insertEntry(text, entry) {
-  const idx = text.indexOf(HEADER);
-  if (idx === -1) return text;
-  const afterHeaderIdx = text.indexOf("\n", idx + HEADER.length);
-  let insertPos = afterHeaderIdx + 1;
-  const maybeHintIdx = text.indexOf(HEADER_HINT, insertPos);
-  if (maybeHintIdx === insertPos) {
-    const afterHint = text.indexOf("\n", maybeHintIdx + HEADER_HINT.length);
-    insertPos = afterHint + 1;
-  }
-  return text.slice(0, insertPos) + entry + "\n" + text.slice(insertPos);
-}
-
-function main() {
-  const hash = sh("git rev-parse HEAD");
-  const date =
-    sh("git log -1 --date=short --pretty=format:%cd") ||
-    new Date().toISOString().slice(0, 10);
-  const subject = sh("git log -1 --pretty=format:%s") || "Update";
-  const bodyRaw = sh("git log -1 --pretty=format:%b");
-  const body =
-    (bodyRaw || "")
-      .split(/\r?\n\r?\n/)
-      .map((s) => s.trim())
-      .filter(Boolean)[0] || "No additional notes.";
-  const changed = sh("git diff --name-status HEAD~1..HEAD");
-
-  if (!hash) process.exit(0);
-
-  const entryLines = [];
-  entryLines.push(`### ${date} — ${subject}`);
-  entryLines.push(`- Commit: ${hash}`);
-  if (changed) {
-    entryLines.push(`- Files changed:`);
-    for (const line of changed.split(/\r?\n/)) {
-      if (!line.trim()) continue;
-      entryLines.push(`  - ${line}`);
-    }
-  }
-  entryLines.push(`- Notes:`);
-  entryLines.push(`  ${body}`);
-  const entry = entryLines.join("\n") + "\n";
-
-  for (const doc of DOCS) {
-    if (!existsSync(doc)) continue;
-    let text = readFileSync(doc, "utf8");
-    if (new RegExp(`\\b${hash}\\b`).test(text)) continue;
-    const ensured = ensureChangelogHeader(text);
-    const updated = insertEntry(ensured, entry);
-    if (updated !== text) {
-      writeFileSync(doc, updated.replace(/\r\n/g, "\n"), "utf8");
-    }
-  }
-}
-
-main();
-
+for (const f of filesToUpdate) updateFile(f.path, f.sectionHeading);
