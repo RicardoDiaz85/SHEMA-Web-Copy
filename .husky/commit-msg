@@ -1,10 +1,7 @@
 #!/usr/bin/env sh
-
-# Run commitlint only if a config exists
 if [ -f commitlint.config.cjs ] || [ -f commitlint.config.js ] || [ -f commitlint.config.mjs ] || \
    [ -f .commitlintrc ] || [ -f .commitlintrc.json ] || [ -f .commitlintrc.js ] || \
    [ -f .commitlintrc.cjs ] || [ -f .commitlintrc.mjs ]; then
   npx --yes commitlint --edit "$1"
 fi
-
 exit 0

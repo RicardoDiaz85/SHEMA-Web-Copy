@@ -1,0 +1,23 @@
+#!/usr/bin/env sh
+CH_FILES="docs/PRD.md docs/Developer-Handoff.md"
+
+if ! git diff --quiet --no-ext-diff; then
+  CHANGED=$(git status --porcelain | awk '{print $2}')
+  ONLY_CHANGELOGS=true
+  for F in $CHANGED; do
+    case "$F" in
+      docs/PRD.md|docs/Developer-Handoff.md) : ;;
+      *) ONLY_CHANGELOGS=false; break ;;
+    esac
+  done
+
+  if [ "$ONLY_CHANGELOGS" = true ]; then
+    git add $CH_FILES
+    HUSKY=0 git commit -m "docs(changelog): sync before rebase/merge"
+    echo "[husky guard] Auto-committed changelog files."
+  else
+    git stash push -u -m "auto-stash-before-rebase-or-merge"
+    echo "[husky guard] Working changes stashed. Run 'git stash pop' after."
+  fi
+fi
+exit 0

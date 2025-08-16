@@ -1,5 +1,4 @@
 #!/usr/bin/env sh
-
 REPO_ROOT="$(git rev-parse --show-toplevel 2>/dev/null || pwd)"
 SCRIPT="$REPO_ROOT/scripts/update-docs-from-commit.mjs"
 
@@ -12,5 +11,4 @@ if [ -f "$SCRIPT" ]; then
     HUSKY=0 git -C "$REPO_ROOT" commit -m "docs(changelog): auto-update for $(git rev-parse --short HEAD)"
   fi
 fi
-
 exit 0
