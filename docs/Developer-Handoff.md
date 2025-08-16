@@ -1,6 +1,8 @@
 # SHEMA-Web — Developer Handoff & Learning Notes
 
 ## Changelog
+- 2025-08-16 — **feat**: add support page (aba64b1)
+
 *(Newest entries first)*
 ### 2025-08-15 — Merge pull request #28 from RicardoDiaz85/codex/repair-git-hooks-in-husky
 - Commit: 2ec1dd6df4665ff9e754d3b1428d948922fdc77f
