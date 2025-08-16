@@ -1,10 +1,11 @@
 #!/usr/bin/env sh
 . "$(dirname "$0")/_/husky.sh"
 
-if [ -f commitlint.config.js ] || [ -f commitlint.config.cjs ] || [ -f commitlint.config.mjs ] || \
+# Run commitlint only if a config exists
+if [ -f commitlint.config.cjs ] || [ -f commitlint.config.js ] || [ -f commitlint.config.mjs ] || \
    [ -f .commitlintrc ] || [ -f .commitlintrc.json ] || [ -f .commitlintrc.js ] || \
    [ -f .commitlintrc.cjs ] || [ -f .commitlintrc.mjs ]; then
   npx --yes commitlint --edit "$1"
-else
-  exit 0
 fi
+
+exit 0

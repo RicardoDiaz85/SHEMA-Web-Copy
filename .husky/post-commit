@@ -1,6 +1,17 @@
 #!/usr/bin/env sh
 . "$(dirname "$0")/_/husky.sh"
 
-if command -v node >/dev/null 2>&1; then
-  node scripts/update-docs-from-commit.mjs || true
+REPO_ROOT="$(git rev-parse --show-toplevel 2>/dev/null || pwd)"
+SCRIPT="$REPO_ROOT/scripts/update-docs-from-commit.mjs"
+
+if [ -f "$SCRIPT" ]; then
+  node "$SCRIPT" || exit 0
+
+  # If the script changed the docs, auto-commit them WITHOUT re-triggering hooks
+  if ! git -C "$REPO_ROOT" diff --quiet -- docs/PRD.md docs/Developer-Handoff.md 2>/dev/null; then
+    git -C "$REPO_ROOT" add docs/PRD.md docs/Developer-Handoff.md
+    HUSKY=0 git -C "$REPO_ROOT" commit -m "docs(changelog): auto-update for $(git rev-parse --short HEAD)"
+  fi
 fi
+
+exit 0
