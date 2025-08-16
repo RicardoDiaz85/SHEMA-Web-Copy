@@ -1,6 +1,8 @@
 # SHEMA-Web — Developer Handoff & Learning Notes
 
 ## Changelog
+- 2025-08-16 — **docs**: updated changes in docs (38f005f)
+
 - 2025-08-16 — **feat**: add support page (aba64b1)
 
 *(Newest entries first)*
